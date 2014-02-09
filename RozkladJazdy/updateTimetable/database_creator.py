@@ -17,9 +17,9 @@ def createDatabase(name):
     kursy = """CREATE TABLE Kursy (
                 Id INTEGER PRIMARY KEY,
                 Nr_linii INTEGER,
-                Godzina_odjazdu_DR TEXT,
-                Godzina_odjazdu_S TEXT,
-                Godzina_odjazdu_N TEXT,
+                Godzina_odjazdu_DR INTEGER,
+                Godzina_odjazdu_S INTEGER,
+                Godzina_odjazdu_N INTEGER,
                 Poczatkowy_przystanek INTEGER,
                 Koncowy_przystanek INTEGER,
                 FOREIGN KEY(Poczatkowy_przystanek) REFERENCES Przystanek(Id),

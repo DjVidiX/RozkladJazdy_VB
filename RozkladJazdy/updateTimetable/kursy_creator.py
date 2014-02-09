@@ -17,9 +17,12 @@ def feedKursy(name):
     for id in ids:
         for i in range(10):
             counter += 1
-            time = random.randint(0,1).__str__() + random.randint(0,9).__str__() + ":" + random.randint(0,5).__str__()  + random.randint(0,9).__str__()
-            time2 = random.randint(0,1).__str__() + random.randint(0,9).__str__() + ":" + random.randint(0,5).__str__()  + random.randint(0,9).__str__()
-            time3 = random.randint(0,1).__str__() + random.randint(0,9).__str__() + ":" + random.randint(0,5).__str__()  + random.randint(0,9).__str__()
+            time = random.randint(0,1439)
+            time2 = random.randint(0,1439)
+            time3 = random.randint(0,1439)
+            # time = random.randint(0,1).__str__() + random.randint(0,9).__str__() + ":" + random.randint(0,5).__str__()  + random.randint(0,9).__str__()
+            # time2 = random.randint(0,1).__str__() + random.randint(0,9).__str__() + ":" + random.randint(0,5).__str__()  + random.randint(0,9).__str__()
+            # time3 = random.randint(0,1).__str__() + random.randint(0,9).__str__() + ":" + random.randint(0,5).__str__()  + random.randint(0,9).__str__()
             p = random.randint(0,1)
             values = (counter, id[2], time, time2, time3, id[p], id[1-p])
             cursor.execute("INSERT INTO Kursy VALUES (?, ?, ?, ?, ?, ?, ?)", values)
